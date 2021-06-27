@@ -33,7 +33,7 @@ print(boundedRatio([8, 5, 6, 16, 5], 1, 3))
 # You can return the answer in any order.
 
 class Solution:
-    def twoSum(self, nums: List[int], target: int) -> List[int]: 
+    def twoSum(self, nums, target: int): 
         # for i in range(len(nums)):
         #     for j in range(i+1, len(nums)):
         #         if nums[i] + nums[j] == target:
@@ -46,4 +46,24 @@ class Solution:
                 return [seen[target-num], i]
             elif num not in seen:
                 seen[num]=i
+
+#Remove Element
+# Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The relative order of the elements may be changed.
+
+# Since it is impossible to change the length of the array in some languages, you must instead have the result be placed in the first part of the array nums. More formally, if there are k elements after removing the duplicates, then the first k elements of nums should hold the final result. It does not matter what you leave beyond the first k elements.
+
+# Return k after placing the final result in the first k slots of nums.
+
+# Do not allocate extra space for another array. You must do this by modifying the input array in-place with O(1) extra memory.
+
+class Solution:
+    def removeElement(self, nums, val: int) -> int:
+        i = -1
+        for j in range(len(nums)):
+            if nums[j] != val:
+                i = i + 1
+                nums[i] = nums[j]
+        return i + 1
+    
+    
         
