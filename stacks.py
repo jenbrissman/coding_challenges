@@ -52,10 +52,6 @@ print(test.og_stack)
 print(test.max_stack)
 
 
-
-
-
-
 # class Stack():
 
 #     def __init__(self, list=[]):
