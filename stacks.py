@@ -6,7 +6,6 @@
 # int top() gets the top element of the stack.
 # int getMax() retrieves the maximum element in the stack.
 
-
 class Maxstack:
     def __init__(self):
         self.og_stack = []
